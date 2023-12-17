@@ -220,7 +220,7 @@ async def forward_user_info(user: User, description: str, context: CallbackConte
     global list_of_message_text
     global complaint_number
     list_of_message_text=list()
-    target_user_id = 1136618776
+    target_user_id = """ID YOU WANT TO SEND"""
     """6920157931"""
     context.user_data['original_user_id'] = target_user_id
     message_text = f"User ID: {user.id}\nUsername: {user.username}\nFirst Name: {user.first_name}\nLast Name: {user.last_name}\nComplaint number:{complaint_number}\n\nDescription: {description}"
@@ -347,7 +347,7 @@ async def restricted_OF_command(update: Update,context: ContextTypes.DEFAULT_TYP
 
    
 async def restricted_command(update: Update,context: ContextTypes.DEFAULT_TYPE) -> int:
-    allowed_user_ids = [1136618776]
+    allowed_user_ids = ["""USERS ID YOU WANT TO ALLOW"""]
     user_id = update.message.from_user.id
 
 
@@ -381,7 +381,7 @@ async def restricted1_OF_command(update: Update,context: ContextTypes.DEFAULT_TY
 
    
 async def restricted1_command(update: Update,context: ContextTypes.DEFAULT_TYPE) -> int:
-    allowed_user_ids = [1136618776]
+    allowed_user_ids = ["""USER,ID YOU WANT TO ALLOW"""]
     user_id = update.message.from_user.id
 
 
@@ -409,7 +409,7 @@ async def cancel(update: Update, context: ContextTypes.DEFAULT_TYPE) -> int:
 def main() -> None:
     """Run the bot."""
     # Create the Application and pass it your bot's token.
-    application = Application.builder().token("6532637154:AAHqGXZpAj8eBHoe9uM5Lyd9GawtJQrInFc").build()
+    application = Application.builder().token("TOKEN").build()
 
     # Add conversation handler with the states GENDER, PHOTO, LOCATION and BIO
     conv_handler = ConversationHandler(
