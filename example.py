@@ -415,7 +415,7 @@ def main() -> None:
     conv_handler = ConversationHandler(
         entry_points=[CommandHandler("start", start)],
         states={
-            ISSUE: [MessageHandler(filters.Regex("^(Civil maintenance|Electrical maintenance|Furnitur maintenance)$"), issue)],
+            ISSUE: [MessageHandler(filters.Regex("^(Civil maintenance|Electrical maintenance|Furniture maintenance)$"), issue)],
             
             LOCATION: [MessageHandler(filters.Regex("^(IT park|S&H|mech)$"), location1)],
             DESCRIBE:  [MessageHandler(filters.TEXT & ~filters.COMMAND, describe)],
